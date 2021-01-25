@@ -1,13 +1,41 @@
-Running 20s test @ http://api/weatherforecast
-  12 threads and 400 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    77.00ms   57.51ms 722.42ms   81.66%
-    Req/Sec   464.46    293.82     5.78k    78.32%
+Connecting to api (172.22.0.2:80)
+wget: server returned error: HTTP/1.1 404 Not Found
+Connecting to api (172.22.0.2:80)
+wget: server returned error: HTTP/1.1 404 Not Found
+5.75ms   91.78%
+    Req/Sec   146.01     70.10   535.00     73.16%
   Latency Distribution
-     50%   60.27ms
-     75%  100.43ms
-     90%  146.70ms
-     99%  265.05ms
-  106537 requests in 20.11s, 67.18MB read
-Requests/sec:   5298.76
-Transfer/sec:      3.34MB
+     50%   25.06ms
+     75%   45.10ms
+     90%  127.71ms
+     99%  696.87ms
+  7887 requests in 5.07s, 3.47MB read
+Requests/sec:   1555.98
+Transfer/sec:    700.74KB
+Running 20s test @ http://api/weatherforecast?count=100000
+  12 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.00us    0.00us   0.00us    -nan%
+    Req/Sec     2.09      3.06    10.00     88.81%
+  Latency Distribution
+     50%    0.00us
+     75%    0.00us
+     90%    0.00us
+     99%    0.00us
+  144 requests in 20.10s, 1.58GB read
+  Socket errors: connect 0, read 0, write 0, timeout 144
+Requests/sec:      7.17
+Transfer/sec:     80.28MB
+Running 5s test @ http://api/weatherforecast?count=5
+  12 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    51.91ms  121.01ms 713.97ms   92.07%
+    Req/Sec   262.06    159.09     0.97k    63.09%
+  Latency Distribution
+     50%   13.58ms
+     75%   28.49ms
+     90%   86.86ms
+     99%  627.16ms
+  14183 requests in 5.10s, 8.94MB read
+Requests/sec:   2782.48
+Transfer/sec:      1.75MB
